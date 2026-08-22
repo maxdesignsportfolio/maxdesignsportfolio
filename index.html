@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Charles Maxwell — Portfolio</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="grain"></div>
+  <div class="scroll-progress"></div>
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <nav class="hero-nav">
+  <a href="#home">HOME</a>
+  <a href="#work">WORK</a>
+  <button class="hero-nav-contact" type="button" data-contact-open>
+    BOOK NOW
+  </button>
+</nav>
+
+
+
+      <div class="hero-copy" aria-hidden="true">
+        <div class="portfolio-word" data-parallax="0.08">
+          <img src="assets/portfolio.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="portfolio-fallback">PORTFOLIO</div>
+        </div>
+      </div>
+
+      <!-- Replace portrait.png with your own transparent portrait/photo. -->
+      <div class="hero-person">
+  <img
+    src="./assets/portrait.png"
+    alt="Portfolio portrait"
+    class="portrait-image"
+  >
+</div>
+
+      <div class="micro-label left">CHARLES</div>
+      <div class="micro-label right">MAXWELL</div>
+      <div class="role-label left">GRAPHIC DESIGNER</div>
+      <div class="role-label right">WEB DESIGNER</div>
+
+      <div class="hero-mark">
+        <img src="assets/monogram.svg" alt="" onerror="this.style.display='none';">
+      </div>
+<div class="hero-stats">
+
+  <div class="hero-stat">
+    <span class="hero-stat-value">03+</span>
+    <span class="hero-stat-label">YEARS EXPERIENCE</span>
+  </div>
+
+  <div class="hero-stat">
+    <span class="hero-stat-value">AI</span>
+    <span class="hero-stat-label">ADOBE ILLUSTRATOR</span>
+  </div>
+
+  <div class="hero-stat">
+    <span class="hero-stat-value">20K+</span>
+    <span class="hero-stat-label">FOLLOWERS ACROSS<br>ALL PLATFORMS</span>
+  </div>
+
+      <a class="scroll-cue" href="#work" aria-label="Scroll to portfolio categories">
+        <span>Explore</span>
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <section class="selector" id="work">
+      <div class="section-label">
+  <span>04 — SELECTED WORK</span>
+  <span>SCROLL TO EXPLORE</span>
+</div>
+      <div class="selector-heading">
+        <span class="heading-line"><strong>What</strong> do</span>
+        <span class="heading-line">you want to see?</span>
+      </div>
+
+      <div class="work-list">
+
+  <a class="work-item" href="./branding.html">
+    <span class="work-index">01</span>
+
+    <div class="work-icon-wrap">
+      <img src="assets/branding.svg" alt="">
+    </div>
+
+    <div class="work-main">
+      <h3>Branding</h3>
+      <p>Visual identities &amp; design systems</p>
+    </div>
+
+    <div class="work-arrow">↗</div>
+  </a>
+
+  <a class="work-item" href="./posters.html">
+    <span class="work-index">02</span>
+
+    <div class="work-icon-wrap">
+      <img src="./assets/paint-pallete-with-paint-brush-svgrepo-com.svg" alt="">
+    </div>
+
+    <div class="work-main">
+      <h3>Poster Designs</h3>
+      <p>Art direction &amp; bold compositions</p>
+    </div>
+
+    <div class="work-arrow">↗</div>
+  </a>
+
+  <a class="work-item" href="./album.html">
+    <span class="work-index">03</span>
+
+    <div class="work-icon-wrap">
+      <img src="assets/album.svg" alt="">
+    </div>
+
+    <div class="work-main">
+      <h3>Album Art</h3>
+      <p>Covers, artwork &amp; visual worlds</p>
+    </div>
+
+    <div class="work-arrow">↗</div>
+  </a>
+
+  <a class="work-item" href="./marketing.html">
+    <span class="work-index">04</span>
+
+    <div class="work-icon-wrap">
+      <img src="assets/marketing.svg" alt="">
+    </div>
+
+    <div class="work-main">
+      <h3>Marketing Designs</h3>
+      <p>Campaigns &amp; promotional visuals</p>
+    </div>
+
+    <div class="work-arrow">↗</div>
+  </a>
+
+</div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+
+  <!-- =====================================================
+       CONTACT MODAL
+  ====================================================== -->
+
+  <style>
+    .hero-nav {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 22px !important;
+    }
+
+    .hero-nav-contact {
+      appearance: none !important;
+      -webkit-appearance: none !important;
+
+      border: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      background: transparent !important;
+      color: rgba(255,255,255,.55) !important;
+
+      font-family: Inter, Arial, sans-serif !important;
+      font-size: 9px !important;
+      font-weight: 500 !important;
+      line-height: 1 !important;
+      letter-spacing: .08em !important;
+
+      cursor: none !important;
+
+      transition:
+        color .35s ease,
+        transform .5s cubic-bezier(.16,1,.3,1) !important;
+    }
+
+    .hero-nav-contact:hover {
+      color: #fff !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ==============================
+       CONTACT MODAL
+    ============================== */
+
+    .homepage-contact-modal {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 10000 !important;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      background: rgba(0,0,0,.72);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition:
+        opacity .5s cubic-bezier(.16,1,.3,1),
+        visibility .5s;
+    }
+
+    .homepage-contact-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .homepage-contact-backdrop {
+      position: absolute;
+      inset: 0;
+
+      background: rgba(0,0,0,.18);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .homepage-contact-panel {
+      position: relative;
+      z-index: 2;
+
+      width: min(560px, 100%);
+      padding: 42px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.018)
+        );
+
+      border: 1px solid rgba(255,255,255,.14);
+
+      box-shadow:
+        0 40px 100px rgba(0,0,0,.65);
+
+      transform:
+        translateY(24px)
+        scale(.965);
+
+      transition:
+        transform .7s cubic-bezier(.16,1,.3,1);
+    }
+
+    .homepage-contact-modal.is-open
+    .homepage-contact-panel {
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+    .homepage-contact-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 50%;
+
+      background: transparent;
+      color: rgba(255,255,255,.65);
+
+      font-family: Inter, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1;
+
+      appearance: none;
+      -webkit-appearance: none;
+
+      cursor: none !important;
+
+      transition:
+        background .4s cubic-bezier(.16,1,.3,1),
+        color .35s ease,
+        transform .5s cubic-bezier(.16,1,.3,1);
+    }
+
+    .homepage-contact-close:hover {
+      background: #fff;
+      color: #000;
+      transform: rotate(90deg);
+    }
+
+    .homepage-contact-header {
+      margin-bottom: 30px;
+      padding-right: 45px;
+    }
+
+    .homepage-contact-kicker {
+      display: block;
+      margin-bottom: 13px;
+
+      font-size: 8px;
+      font-weight: 500;
+
+      letter-spacing: .16em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,.3);
+    }
+
+    .homepage-contact-header h2 {
+      margin: 0 0 10px;
+
+      font-family: Inter, Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      font-weight: 800;
+      line-height: .85;
+      letter-spacing: -.08em;
+    }
+
+    .homepage-contact-header p {
+      margin: 0;
+
+      font-size: 11px;
+      line-height: 1.5;
+
+      color: rgba(255,255,255,.4);
+    }
+
+    .homepage-contact-links {
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .homepage-contact-link {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 40px 1fr 34px;
+      align-items: center;
+
+      min-height: 82px;
+
+      border-bottom: 1px solid rgba(255,255,255,.1);
+
+      transition:
+        padding .6s cubic-bezier(.16,1,.3,1),
+        background .4s ease;
+    }
+
+    .homepage-contact-link:hover {
+      padding-left: 10px;
+      padding-right: 6px;
+
+      background: rgba(255,255,255,.035);
+    }
+
+    .homepage-contact-number {
+      font-size: 8px;
+      letter-spacing: .12em;
+      color: rgba(255,255,255,.28);
+    }
+
+    .homepage-contact-main {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .homepage-contact-main strong {
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: -.04em;
+    }
+
+    .homepage-contact-main small {
+      font-size: 8px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.34);
+    }
+
+    .homepage-contact-arrow {
+      width: 30px;
+      height: 30px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+
+      color: rgba(255,255,255,.45);
+
+      transform: rotate(-45deg);
+
+      transition:
+        transform .55s cubic-bezier(.16,1,.3,1),
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+    }
+
+    .homepage-contact-link:hover
+    .homepage-contact-arrow {
+      transform: rotate(0deg);
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .homepage-contact-footer {
+      margin-top: 23px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      font-size: 7px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,.23);
+    }
+
+    /* Keep the site's custom pointer above the modal. */
+    .cursor {
+      z-index: 11001 !important;
+    }
+
+    .cursor-dot {
+      z-index: 11002 !important;
+    }
+
+    body,
+    body * {
+      cursor: none !important;
+    }
+
+    .homepage-contact-modal,
+    .homepage-contact-modal *,
+    .hero-nav-contact {
+      cursor: none !important;
+    }
+
+    @media (max-width: 600px) {
+.homepage-contact-modal {
+        padding: 14px;
+      }
+
+      .homepage-contact-panel {
+        padding: 30px 22px 24px;
+      }
+
+      .homepage-contact-link {
+        min-height: 76px;
+      }
+
+      .homepage-contact-main strong {
+        font-size: 15px;
+      }
+
+      .homepage-contact-footer {
+        font-size: 6px;
+      }
+    }
+  </style>
+
+  <div
+    class="homepage-contact-modal"
+    aria-hidden="true"
+  >
+    <div
+      class="homepage-contact-backdrop"
+      data-contact-close
+    ></div>
+
+    <div
+      class="homepage-contact-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="homepage-contact-title"
+    >
+      <button
+        class="homepage-contact-close"
+        type="button"
+        data-contact-close
+        aria-label="Close contact menu"
+      >×</button>
+
+      <div class="homepage-contact-header">
+        <span class="homepage-contact-kicker">
+          LET'S WORK TOGETHER
+        </span>
+
+        <h2 id="homepage-contact-title">
+          Get in touch.
+        </h2>
+
+        <p>
+          Choose whichever channel works best for you.
+        </p>
+      </div>
+
+      <div class="homepage-contact-links">
+
+        <a
+          class="homepage-contact-link"
+          href="YOUR_WHATSAPP_LINK"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="homepage-contact-number">01</span>
+
+          <span class="homepage-contact-main">
+            <strong>WhatsApp</strong>
+            <small>Chat directly</small>
+          </span>
+
+          <span class="homepage-contact-arrow">↗</span>
+        </a>
+
+        <a
+          class="homepage-contact-link"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=YOUR_EMAIL&amp;su=Project%20Enquiry"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="homepage-contact-number">02</span>
+
+          <span class="homepage-contact-main">
+            <strong>Email</strong>
+            <small>Send an enquiry</small>
+          </span>
+
+          <span class="homepage-contact-arrow">↗</span>
+        </a>
+
+        <a
+          class="homepage-contact-link"
+          href="YOUR_INSTAGRAM_LINK"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="homepage-contact-number">03</span>
+
+          <span class="homepage-contact-main">
+            <strong>Instagram</strong>
+            <small>See more of my work</small>
+          </span>
+
+          <span class="homepage-contact-arrow">↗</span>
+        </a>
+
+        <a
+          class="homepage-contact-link"
+          href="YOUR_TIKTOK_LINK"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="homepage-contact-number">04</span>
+
+          <span class="homepage-contact-main">
+            <strong>TikTok</strong>
+            <small>Follow the process</small>
+          </span>
+
+          <span class="homepage-contact-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <div class="homepage-contact-footer">
+        <span>AVAILABLE FOR SELECT PROJECTS</span>
+        <span>© 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const modal = document.querySelector(
+        '.homepage-contact-modal'
+      );
+
+      const trigger = document.querySelector(
+        '[data-contact-open]'
+      );
+
+      if (!modal || !trigger) return;
+
+      const openModal = () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      trigger.addEventListener(
+        'click',
+        openModal
+      );
+
+      modal
+        .querySelectorAll('[data-contact-close]')
+        .forEach((element) => {
+          element.addEventListener(
+            'click',
+            closeModal
+          );
+        });
+
+      document.addEventListener(
+        'keydown',
+        (event) => {
+          if (
+            event.key === 'Escape' &&
+            modal.classList.contains('is-open')
+          ) {
+            closeModal();
+          }
+        }
+      );
+    })();
+  </script>
+
+</body>
+</html>
