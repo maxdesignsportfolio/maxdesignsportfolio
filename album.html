@@ -8,14 +8,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{--bg:#000;--fg:#f5f5f5;--line:rgba(255,255,255,.13);--ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box}html{background:#000;scroll-behavior:smooth}
-body{margin:0;background:#000;color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden;cursor:none}
+body{margin:0;background:#000;color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden;cursor:auto}
 a{text-decoration:none;color:inherit}
 .grain{position:fixed;inset:-45%;z-index:1000;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");animation:grain .18s steps(2) infinite}
 @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(1.4%,-1%)}50%{transform:translate(-1%,1.4%)}75%{transform:translate(1%,1%)}100%{transform:translate(-1.4%,-1%)}}
-.cursor,.cursor-dot{position:fixed;left:0;top:0;z-index:1100;pointer-events:none;transform:translate(-50%,-50%);border-radius:50%;mix-blend-mode:difference}
-.cursor{width:34px;height:34px;border:1px solid rgba(255,255,255,.52);transition:width .45s var(--ease),height .45s var(--ease),background .4s,border-color .4s}
-.cursor-dot{width:4px;height:4px;background:#fff}
-body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;background:rgba(255,255,255,.08)}
+
 .scroll-progress{position:fixed;top:0;left:0;width:100%;height:2px;z-index:1050;background:#fff;transform:scaleX(0);transform-origin:left}
 .page{width:min(1440px,100%);margin:auto;padding:48px 7vw 120px;isolation:isolate}
 .topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;margin-bottom:72px;opacity:0;transform:translateY(-14px);animation:topbarIn .95s var(--ease) .05s forwards}
@@ -349,14 +346,21 @@ body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;backgro
   }
 
 }
+
+.cursor,.cursor-dot{display:none!important} body{cursor:auto!important} a,button,[role="button"]{cursor:pointer!important}
+</style>
+
+<style>
+/* ===== Responsive hardening layer ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%} img,video,svg{max-width:100%}.page{width:100%}
+@media(max-width:1000px){.page{padding-inline:clamp(20px,5vw,48px)!important}.cover-grid{gap:18px!important}}
+@media(max-width:700px){.page{padding-inline:16px!important}.topbar{margin-bottom:42px!important}.hero-copy{grid-template-columns:1fr!important}.cover-grid{grid-template-columns:1fr!important}.contact-panel{width:calc(100vw - 24px)!important;max-height:92svh;overflow:auto}.closing{display:block!important}.closing-copy{margin-top:14px!important}}
+@media(max-width:380px){.page{padding-inline:12px!important}.back,.work-pill{font-size:7px!important}}
 </style>
 </head>
 <body>
 <div class="grain"></div>
 <div class="scroll-progress"></div>
-<div class="cursor"></div>
-<div class="cursor-dot"></div>
-
 <main class="page">
 <header class="topbar">
 <a class="back" href="index.html" data-hover><span class="back-arrow">←</span><span>BACK</span></a>
@@ -382,7 +386,7 @@ body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;backgro
 <section class="cover-grid" aria-label="Album cover projects">
 
 <article class="cover-card" data-hover>
-<img class="cover-art" src="assets/album-01.jpg" alt="Album cover 01">
+<img class="cover-art" src="https://res.cloudinary.com/pksgbd8l/image/upload/album-01.jpg" alt="Album cover 01">
 <div class="cover-meta">
 <div class="cover-info"><span class="cover-number">01</span><span class="cover-name">DREAMSTATE - ORLO</span><span class="cover-type">Cover Art</span></div>
 <a class="published" href="https://music.youtube.com/playlist?list=OLAK5uy_mHvisYrUqbQ2zsCy3Ux4TbiW3JNYnIYhM&si=2Py301c8qO0nNwCy" target="_blank" rel="noopener" data-hover><span class="published-dot"></span>Listen on YouTube Music</a>
@@ -390,7 +394,7 @@ body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;backgro
 </article>
 
 <article class="cover-card" data-hover>
-<img class="cover-art" src="assets/album-02.jpg" alt="Album cover 02">
+<img class="cover-art" src="https://res.cloudinary.com/pksgbd8l/image/upload/album-02.jpg" alt="Album cover 02">
 <div class="cover-meta">
 <div class="cover-info"><span class="cover-number">02</span><span class="cover-name">SHAZAM - HAYZED</span><span class="cover-type">Cover Art</span></div>
 <a class="published" href="https://music.youtube.com/watch?v=UKTza2NmGSg&si=5WRnLOwQ_HS1QZwn" target="_blank" rel="noopener" data-hover><span class="published-dot"></span>Listen on YouTube Music</a>
@@ -398,14 +402,14 @@ body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;backgro
 </article>
 
 <article class="cover-card" data-hover>
-<img class="cover-art" src="assets/album-03.jpg" alt="Album cover 03">
+<img class="cover-art" src="https://res.cloudinary.com/pksgbd8l/image/upload/album-03.jpg" alt="Album cover 03">
 <div class="cover-meta">
 <div class="cover-info"><span class="cover-number">03</span><span class="cover-name">GROOVING DANCE</span><span class="cover-type">Cover Art</span></div>
 </div>
 </article>
 
 <article class="cover-card" data-hover>
-<img class="cover-art" src="assets/album-04.jpg" alt="Album cover 04">
+<img class="cover-art" src="https://res.cloudinary.com/pksgbd8l/image/upload/album-04.jpg" alt="Album cover 04">
 <div class="cover-meta">
 <div class="cover-info"><span class="cover-number">04</span><span class="cover-name">SINS AND LIES</span><span class="cover-type">Cover Art</span></div>
 </div>
@@ -541,33 +545,7 @@ body.is-hovering .cursor{width:76px;height:76px;border-color:transparent;backgro
 <script>
 (() => {
 const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const cursor=document.querySelector('.cursor');
-const dot=document.querySelector('.cursor-dot');
 const progress=document.querySelector('.scroll-progress');
-
-let mouseX=innerWidth/2,mouseY=innerHeight/2;
-let cursorX=mouseX,cursorY=mouseY,dotX=mouseX,dotY=mouseY;
-
-addEventListener('pointermove',e=>{mouseX=e.clientX;mouseY=e.clientY},{passive:true});
-
-function cursorLoop(){
-cursorX+=(mouseX-cursorX)*.14;
-cursorY+=(mouseY-cursorY)*.14;
-dotX+=(mouseX-dotX)*.34;
-dotY+=(mouseY-dotY)*.34;
-
-if(cursor)cursor.style.transform=`translate3d(${cursorX}px,${cursorY}px,0) translate(-50%,-50%)`;
-if(dot)dot.style.transform=`translate3d(${dotX}px,${dotY}px,0) translate(-50%,-50%)`;
-
-requestAnimationFrame(cursorLoop);
-}
-if(!reduce&&cursor&&dot)cursorLoop();
-
-document.querySelectorAll('[data-hover]').forEach(el=>{
-el.addEventListener('mouseenter',()=>document.body.classList.add('is-hovering'));
-el.addEventListener('mouseleave',()=>document.body.classList.remove('is-hovering'));
-});
-
 function updateProgress(){
 if(!progress)return;
 const max=document.documentElement.scrollHeight-innerHeight;

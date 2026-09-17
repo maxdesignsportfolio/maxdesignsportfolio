@@ -1,41 +1,8 @@
 
 (() => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const cursor = document.querySelector('.cursor');
-  const dot = document.querySelector('.cursor-dot');
   const progress = document.querySelector('.scroll-progress');
-
-  let mouseX = innerWidth / 2, mouseY = innerHeight / 2;
-  let cursorX = mouseX, cursorY = mouseY, dotX = mouseX, dotY = mouseY;
-
-  addEventListener('pointermove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  }, { passive: true });
-
-  function cursorLoop() {
-    cursorX += (mouseX - cursorX) * .14;
-    cursorY += (mouseY - cursorY) * .14;
-    dotX += (mouseX - dotX) * .34;
-    dotY += (mouseY - dotY) * .34;
-
-    if (cursor) cursor.style.transform =
-      `translate3d(${cursorX}px,${cursorY}px,0) translate(-50%,-50%)`;
-
-    if (dot) dot.style.transform =
-      `translate3d(${dotX}px,${dotY}px,0) translate(-50%,-50%)`;
-
-    requestAnimationFrame(cursorLoop);
-  }
-
-  if (!reduce && cursor && dot) cursorLoop();
-
-  document.querySelectorAll('[data-hover]').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
-  });
-
-  function updateProgress() {
+function updateProgress() {
     if (!progress) return;
     const max = document.documentElement.scrollHeight - innerHeight;
     progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;

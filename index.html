@@ -12,9 +12,6 @@
 <body>
   <div class="grain"></div>
   <div class="scroll-progress"></div>
-  <div class="cursor"></div>
-  <div class="cursor-dot"></div>
-
   <main>
     <section class="hero" id="home">
       <nav class="hero-nav">
@@ -29,7 +26,7 @@
 
       <div class="hero-copy" aria-hidden="true">
         <div class="portfolio-word" data-parallax="0.08">
-          <img src="assets/portfolio.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <img src="https://res.cloudinary.com/pksgbd8l/image/upload/portfolio.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <div class="portfolio-fallback">PORTFOLIO</div>
         </div>
       </div>
@@ -37,7 +34,7 @@
       <!-- Replace portrait.png with your own transparent portrait/photo. -->
       <div class="hero-person">
   <img
-    src="./assets/portrait.png"
+    src="https://res.cloudinary.com/pksgbd8l/image/upload/portrait.png"
     alt="Portfolio portrait"
     class="portrait-image"
   >
@@ -49,7 +46,7 @@
       <div class="role-label right">WEB DESIGNER</div>
 
       <div class="hero-mark">
-        <img src="assets/monogram.svg" alt="" onerror="this.style.display='none';">
+        <img src="https://res.cloudinary.com/pksgbd8l/image/upload/monogram.svg" alt="" onerror="this.style.display='none';">
       </div>
 <div class="hero-stats">
 
@@ -90,7 +87,7 @@
     <span class="work-index">01</span>
 
     <div class="work-icon-wrap">
-      <img src="assets/branding.svg" alt="">
+      <img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding.svg" alt="">
     </div>
 
     <div class="work-main">
@@ -105,7 +102,7 @@
     <span class="work-index">02</span>
 
     <div class="work-icon-wrap">
-      <img src="./assets/paint-pallete-with-paint-brush-svgrepo-com.svg" alt="">
+      <img src="https://res.cloudinary.com/pksgbd8l/image/upload/paint-pallete-with-paint-brush-svgrepo-com.svg" alt="">
     </div>
 
     <div class="work-main">
@@ -120,7 +117,7 @@
     <span class="work-index">03</span>
 
     <div class="work-icon-wrap">
-      <img src="assets/album.svg" alt="">
+      <img src="https://res.cloudinary.com/pksgbd8l/image/upload/album.svg" alt="">
     </div>
 
     <div class="work-main">
@@ -135,7 +132,7 @@
     <span class="work-index">04</span>
 
     <div class="work-icon-wrap">
-      <img src="assets/marketing.svg" alt="">
+      <img src="https://res.cloudinary.com/pksgbd8l/image/upload/marketing.svg" alt="">
     </div>
 
     <div class="work-main">
@@ -181,7 +178,7 @@
       line-height: 1 !important;
       letter-spacing: .08em !important;
 
-      cursor: none !important;
+      cursor: auto !important;
 
       transition:
         color .35s ease,
@@ -294,7 +291,7 @@
       appearance: none;
       -webkit-appearance: none;
 
-      cursor: none !important;
+      cursor: auto !important;
 
       transition:
         background .4s cubic-bezier(.16,1,.3,1),
@@ -440,26 +437,6 @@
       color: rgba(255,255,255,.23);
     }
 
-    /* Keep the site's custom pointer above the modal. */
-    .cursor {
-      z-index: 11001 !important;
-    }
-
-    .cursor-dot {
-      z-index: 11002 !important;
-    }
-
-    body,
-    body * {
-      cursor: none !important;
-    }
-
-    .homepage-contact-modal,
-    .homepage-contact-modal *,
-    .hero-nav-contact {
-      cursor: none !important;
-    }
-
     @media (max-width: 600px) {
 .homepage-contact-modal {
         padding: 14px;
@@ -539,7 +516,7 @@
 
         <a
           class="homepage-contact-link"
-          href="https://mail.google.com/mail/u/0/?fs=1&to=enquiries.designedbymax@gmail.com&su=Project+Enquiry&body=Hi+Max,%0A%0AI%27d+like+to+work+with+you+on+a+project.%0A%0AProject+details:&tf=cm"
+          href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=enquiries.designedbymax@gmail.com&su=Project%20Enquiry"
           target="_blank"
           rel="noopener"
         >
@@ -571,7 +548,7 @@
 
         <a
           class="homepage-contact-link"
-          href="https://tiktok.com/@designed.by.max"
+          href="https://www.tiktok.com/@designed.by.max"
           target="_blank"
           rel="noopener"
         >

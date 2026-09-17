@@ -1,38 +1,7 @@
 
     (() => {
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const cursor = document.querySelector('.cursor');
-      const dot = document.querySelector('.cursor-dot');
       const progress = document.querySelector('.scroll-progress');
-
-      // Smooth custom cursor.
-      let mouseX = innerWidth / 2, mouseY = innerHeight / 2;
-      let cursorX = mouseX, cursorY = mouseY;
-      let dotX = mouseX, dotY = mouseY;
-
-      window.addEventListener('pointermove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      }, { passive: true });
-
-      function animateCursor() {
-        cursorX += (mouseX - cursorX) * .14;
-        cursorY += (mouseY - cursorY) * .14;
-        dotX += (mouseX - dotX) * .35;
-        dotY += (mouseY - dotY) * .35;
-
-        if (cursor) cursor.style.transform = `translate3d(${cursorX}px,${cursorY}px,0) translate(-50%,-50%)`;
-        if (dot) dot.style.transform = `translate3d(${dotX}px,${dotY}px,0) translate(-50%,-50%)`;
-        requestAnimationFrame(animateCursor);
-      }
-
-      if (!reduceMotion && cursor && dot) animateCursor();
-
-      // Hover state for interactive elements.
-      document.querySelectorAll('a, button, .card').forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('is-hovering'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering'));
-      });
 
       // Reveal the category section when it enters the viewport.
       const selector = document.querySelector('.selector');
