@@ -7,12 +7,22 @@
   <title>Charles Maxwell — Portfolio</title>
 
   <link rel="stylesheet" href="./style.css">
+
+<script>
+  document.documentElement.classList.toggle(
+    'mobile-layout',
+    window.matchMedia('(max-width: 900px)').matches
+  );
+</script>
+<link rel="stylesheet" href="./mobile-layout.css">
+<script defer src="./mobile-layout.js"></script>
+
 </head>
 
 <body>
   <div class="grain"></div>
   <div class="scroll-progress"></div>
-  <main>
+  <main class="desktop-site">
     <section class="hero" id="home">
       <nav class="hero-nav">
   <a href="#home">HOME</a>
@@ -146,6 +156,45 @@
 </div>
     </section>
   </main>
+
+<template id="mobile-layout-template">
+<main class="mobile-site mobile-home" aria-label="Mobile portfolio">
+  <header class="m-topbar">
+    <a class="m-brand" href="#m-home"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/monogram.svg" alt=""><span>Charles Maxwell</span></a>
+    <div class="m-nav-actions"><button class="m-contact-button" type="button" data-contact-open>Book now</button></div>
+  </header>
+
+  <section class="m-hero" id="m-home">
+    <p class="m-kicker">Graphic Designer / Web Designer</p>
+    <h1 class="m-display">Design <strong>with</strong> intent.</h1>
+    <p class="m-hero-copy">Selected identity, poster, album and campaign work by <strong>Charles Maxwell.</strong></p>
+  </section>
+
+  <div class="m-home-portrait">
+    <img src="https://res.cloudinary.com/pksgbd8l/image/upload/portrait.png" alt="Charles Maxwell portrait" fetchpriority="high" decoding="async">
+  </div>
+
+  <section class="m-stats" aria-label="Portfolio statistics">
+    <div class="m-stat"><strong>03+</strong><span>Years experience</span></div>
+    <div class="m-stat"><strong>AI</strong><span>Adobe Illustrator</span></div>
+    <div class="m-stat"><strong>20K+</strong><span>Followers across platforms</span></div>
+  </section>
+
+  <section class="m-section" id="m-work">
+    <div class="m-section-head"><h2>Selected work</h2><span>04 categories</span></div>
+    <div class="m-work-list">
+      <a class="m-work-card" href="./branding.html"><span class="m-work-index">01</span><div class="m-work-copy"><h3>Branding</h3><p>Visual identities &amp; design systems</p></div><span class="m-work-arrow">↗</span></a>
+      <a class="m-work-card" href="./posters.html"><span class="m-work-index">02</span><div class="m-work-copy"><h3>Poster Designs</h3><p>Art direction &amp; bold compositions</p></div><span class="m-work-arrow">↗</span></a>
+      <a class="m-work-card" href="./album.html"><span class="m-work-index">03</span><div class="m-work-copy"><h3>Album Art</h3><p>Covers, artwork &amp; visual worlds</p></div><span class="m-work-arrow">↗</span></a>
+      <a class="m-work-card" href="./marketing.html"><span class="m-work-index">04</span><div class="m-work-copy"><h3>Marketing</h3><p>Campaigns &amp; promotional visuals</p></div><span class="m-work-arrow">↗</span></a>
+    </div>
+  </section>
+
+  <section class="m-closing"><span>Available for select projects</span><p>Have something worth making <strong>unmissable?</strong></p></section>
+  <div class="m-footer"><span>Designed by Max</span><span>© 2026</span></div>
+</main>
+</template>
+
 
   <script src="./script.js"></script>
 

@@ -5,9 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Branding — Portfolio</title>
 <link rel="stylesheet" href="./branding.css">
+
+<script>
+  document.documentElement.classList.toggle(
+    'mobile-layout',
+    window.matchMedia('(max-width: 900px)').matches
+  );
+</script>
+<link rel="stylesheet" href="./mobile-layout.css">
+<script defer src="./mobile-layout.js"></script>
+
 </head>
 <body>
-<div class="grain"></div><div class="scroll-progress"></div><main class="page">
+<div class="grain"></div><div class="scroll-progress"></div><main class="page desktop-site">
   <header class="header">
     <a class="back" href="index.html" data-hover><span class="back-arrow">←</span><span>BACK</span></a>
     <div class="page-title-wrap">
@@ -143,6 +153,125 @@
 
 </section>
 </main>
+
+<template id="mobile-layout-template">
+<main class="mobile-site" aria-label="Mobile branding portfolio">
+  <header class="m-topbar"><a class="m-brand" href="./index.html"><span>←</span><span>Back</span></a><button class="m-contact-button" type="button" data-contact-open>Work with me</button></header>
+  <section class="m-page-intro"><p class="m-kicker">Selected work / 2026</p><h1 class="m-page-title">Branding</h1><p class="m-hero-copy">Identity systems, art direction and visual languages built to make brands feel unmistakably themselves.</p><div class="m-count">04 identity systems / 21 visuals</div></section>
+  <section class="m-group"><div class="m-group-head"><span>01</span><strong>MOISANITE &amp; CO.</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-01.jpg" alt="MOISSANITE & CO." loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">01</span><strong>MOISSANITE & CO.</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-02.jpg" alt="MARK / SYMBOL" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02</span><strong>MARK / SYMBOL</strong><span class="m-type">System</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-03.jpg" alt="LOGO SYSTEM" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">03</span><strong>LOGO SYSTEM</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-04.jpg" alt="TYPOGRAPHY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">04</span><strong>TYPOGRAPHY</strong><span class="m-type">Direction</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-05.jpg" alt="APPLICATION" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">05</span><strong>APPLICATION</strong><span class="m-type">Brand world</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-06.jpg" alt="VISUAL LANGUAGE" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">06</span><strong>VISUAL LANGUAGE</strong><span class="m-type">System</span></div>
+  
+</article></div></section>
+  <section class="m-group"><div class="m-group-head"><span>02</span><strong>THE PEOPLE'S BRAND</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-07.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">07</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-08.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">08</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-09.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">09</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-10.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">10</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-11.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">11</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-12.jpg" alt="THE PEOPLE'S BRAND" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">12</span><strong>THE PEOPLE'S BRAND</strong><span class="m-type">Identity</span></div>
+  
+</article></div></section>
+  <section class="m-group"><div class="m-group-head"><span>03</span><strong>ALCHEMY</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-13.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">13</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-14.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">14</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-15.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">15</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-16.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">16</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-17.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">17</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-auto"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-18.jpg" alt="ALCHEMY" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">18</span><strong>ALCHEMY</strong><span class="m-type">Identity</span></div>
+  
+</article></div></section>
+  <section class="m-group"><div class="m-group-head"><span>04</span><strong>VIVANT CARE GROUP</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-19.jpg" alt="VIVANT CARE GROUP" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">19</span><strong>VIVANT CARE GROUP</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-20.jpg" alt="VIVANT CARE GROUP" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">20</span><strong>VIVANT CARE GROUP</strong><span class="m-type">Identity</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/branding-21.jpg" alt="VIVANT CARE GROUP" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">21</span><strong>VIVANT CARE GROUP</strong><span class="m-type">Identity</span></div>
+  
+</article></div></section>
+  <section class="m-closing"><span>Branding / Identity systems</span><p>Built to feel <strong>recognisable before readable.</strong></p></section>
+  <div class="m-footer"><span>Designed by Max</span><span>© 2026</span></div>
+</main>
+</template>
+
 
 <div class="contact-modal" aria-hidden="true">
 

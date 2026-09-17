@@ -357,11 +357,21 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%} img,video,svg{max-widt
 @media(max-width:700px){.page{padding-inline:16px!important}.topbar{margin-bottom:42px!important}.hero-copy{grid-template-columns:1fr!important}.cover-grid{grid-template-columns:1fr!important}.contact-panel{width:calc(100vw - 24px)!important;max-height:92svh;overflow:auto}.closing{display:block!important}.closing-copy{margin-top:14px!important}}
 @media(max-width:380px){.page{padding-inline:12px!important}.back,.work-pill{font-size:7px!important}}
 </style>
+
+<script>
+  document.documentElement.classList.toggle(
+    'mobile-layout',
+    window.matchMedia('(max-width: 900px)').matches
+  );
+</script>
+<link rel="stylesheet" href="./mobile-layout.css">
+<script defer src="./mobile-layout.js"></script>
+
 </head>
 <body>
 <div class="grain"></div>
 <div class="scroll-progress"></div>
-<main class="page">
+<main class="page desktop-site">
 <header class="topbar">
 <a class="back" href="index.html" data-hover><span class="back-arrow">←</span><span>BACK</span></a>
 <div class="title-wrap"><h1 class="page-title">ALBUM COVERS</h1></div>
@@ -422,6 +432,37 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%} img,video,svg{max-widt
 <p class="closing-copy">Designed to make the <strong>music feel visible</strong> before the first note plays.</p>
 </section>
 </main>
+
+<template id="mobile-layout-template">
+<main class="mobile-site" aria-label="Mobile album art portfolio">
+  <header class="m-topbar"><a class="m-brand" href="./index.html"><span>←</span><span>Back</span></a><button class="m-contact-button" type="button" data-contact-open>Work with me</button></header>
+  <section class="m-page-intro"><p class="m-kicker">Selected work / album art</p><h1 class="m-page-title">Album<br>Covers</h1><p class="m-hero-copy"><strong>Visual worlds</strong> built for artists, releases and records that deserve to be remembered.</p><div class="m-count">04 covers</div></section>
+  <section class="m-group"><div class="m-group-head"><span>01</span><strong>Selected covers</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/album-01.jpg" alt="DREAMSTATE - ORLO" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">01</span><strong>DREAMSTATE - ORLO</strong><span class="m-type">Cover Art</span></div>
+  <a class="m-listen" href="https://music.youtube.com/playlist?list=OLAK5uy_mHvisYrUqbQ2zsCy3Ux4TbiW3JNYnIYhM&si=2Py301c8qO0nNwCy" target="_blank" rel="noopener">Listen on YouTube Music</a>
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/album-02.jpg" alt="SHAZAM - HAYZED" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02</span><strong>SHAZAM - HAYZED</strong><span class="m-type">Cover Art</span></div>
+  <a class="m-listen" href="https://music.youtube.com/watch?v=UKTza2NmGSg&si=5WRnLOwQ_HS1QZwn" target="_blank" rel="noopener">Listen on YouTube Music</a>
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/album-03.jpg" alt="GROOVING DANCE" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">03</span><strong>GROOVING DANCE</strong><span class="m-type">Cover Art</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/album-04.jpg" alt="SINS AND LIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">04</span><strong>SINS AND LIES</strong><span class="m-type">Cover Art</span></div>
+  
+</article></div></section>
+  <section class="m-closing"><span>Album Art / Direction</span><p>Designed to make the <strong>music feel visible</strong> before the first note plays.</p></section>
+  <div class="m-footer"><span>Designed by Max</span><span>© 2026</span></div>
+</main>
+</template>
+
 
 <div class="contact-modal" aria-hidden="true">
 

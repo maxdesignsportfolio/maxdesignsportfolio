@@ -5,9 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Marketing — Portfolio</title>
 <link rel="stylesheet" href="./marketing.css">
+
+<script>
+  document.documentElement.classList.toggle(
+    'mobile-layout',
+    window.matchMedia('(max-width: 900px)').matches
+  );
+</script>
+<link rel="stylesheet" href="./mobile-layout.css">
+<script defer src="./mobile-layout.js"></script>
+
 </head>
 <body>
-<div class="grain"></div><div class="scroll-progress"></div><main class="page">
+<div class="grain"></div><div class="scroll-progress"></div><main class="page desktop-site">
 <header class="topbar">
 <a class="back" href="index.html" data-hover><span class="back-arrow">←</span><span>BACK</span></a>
 <div class="title-wrap"><h1 class="page-title">MARKETING</h1></div>
@@ -67,6 +77,59 @@
 <p class="closing-copy">From <strong>public-space impact</strong> to product-focused digital design, every piece is built to make the message land.</p>
 </section>
 </main>
+
+<template id="mobile-layout-template">
+<main class="mobile-site" aria-label="Mobile marketing portfolio">
+  <header class="m-topbar"><a class="m-brand" href="./index.html"><span>←</span><span>Back</span></a><button class="m-contact-button" type="button" data-contact-open>Work with me</button></header>
+  <section class="m-page-intro"><p class="m-kicker">Selected work / campaigns</p><h1 class="m-page-title">Marketing</h1><p class="m-hero-copy"><strong>Design that gets noticed</strong> — from streetside campaigns to digital product launches.</p><div class="m-count">05 projects</div></section>
+
+  <section class="m-group">
+    <div class="m-group-head"><span>01</span><strong>Outdoor campaign / Leadroitt</strong></div>
+    <h2 class="m-campaign-title">LEADROITT</h2>
+    <p class="m-campaign-copy">Billboard creative for a real estate campaign — designed for immediate recognition at distance.</p>
+    <article class="m-media-card"><div class="m-media-frame m-video-frame"><video src="https://res.cloudinary.com/pksgbd8l/image/upload/leadroitt-billboard.mp4" muted autoplay loop playsinline preload="metadata"></video></div><div class="m-caption"><span class="m-no">01.1</span><strong>Outdoor Billboard</strong><span class="m-type">Drone capture</span></div></article>
+  </section>
+
+  <section class="m-group">
+    <div class="m-group-head"><span>01.2</span><strong>Campaign in context</strong></div>
+    <p class="m-campaign-copy">A presentation mockup showing how the billboard translates from designed artwork into a real-world advertising surface.</p>
+    
+<article class="m-media-card">
+  <div class="m-media-frame ratio-wide"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/leadroitt-mockup.jpg" alt="LEADROITT" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">01.2</span><strong>LEADROITT</strong><span class="m-type">Mockup</span></div>
+  
+</article>
+  </section>
+
+  <section class="m-group">
+    <div class="m-group-head"><span>02</span><strong>Tech / product campaigns</strong></div>
+    <div class="m-gallery">
+      
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/tech-flyer-01.jpg" alt="PRODUCT CAMPAIGN" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02.1</span><strong>PRODUCT CAMPAIGN</strong><span class="m-type">Digital</span></div>
+  
+</article>
+      
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/tech-flyer-02.jpg" alt="PRODUCT CAMPAIGN" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02.2</span><strong>PRODUCT CAMPAIGN</strong><span class="m-type">Digital</span></div>
+  
+</article>
+      
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/tech-flyer-03.jpg" alt="PRODUCT CAMPAIGN" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02.3</span><strong>PRODUCT CAMPAIGN</strong><span class="m-type">Digital</span></div>
+  
+</article>
+    </div>
+  </section>
+
+  <section class="m-closing"><span>Marketing / Campaigns</span><p>From <strong>public-space impact</strong> to product-focused digital design, every piece is built to make the message land.</p></section>
+  <div class="m-footer"><span>Designed by Max</span><span>© 2026</span></div>
+</main>
+</template>
+
 
 <div class="contact-modal" aria-hidden="true">
 

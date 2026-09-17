@@ -6,13 +6,23 @@
 <title>Poster Design — Portfolio</title>
 
 <link rel="stylesheet" href="./posters.css">
+
+<script>
+  document.documentElement.classList.toggle(
+    'mobile-layout',
+    window.matchMedia('(max-width: 900px)').matches
+  );
+</script>
+<link rel="stylesheet" href="./mobile-layout.css">
+<script defer src="./mobile-layout.js"></script>
+
 </head>
 
 <body>
 
 <div class="grain"></div>
 <div class="scroll-progress"></div>
-<main class="page">
+<main class="page desktop-site">
 
 <header class="topbar">
 
@@ -266,6 +276,79 @@
 </section>
 
 </main>
+
+<template id="mobile-layout-template">
+<main class="mobile-site" aria-label="Mobile poster portfolio">
+  <header class="m-topbar"><a class="m-brand" href="./index.html"><span>←</span><span>Back</span></a><button class="m-contact-button" type="button" data-contact-open>Work with me</button></header>
+  <section class="m-page-intro"><p class="m-kicker">Selected work / concept posters</p><h1 class="m-page-title">Poster<br>Design</h1><p class="m-hero-copy"><strong>Ideas turned visual.</strong> Experimental compositions, cultural concepts and poster pieces made to stop the scroll.</p><div class="m-count">12 posters</div></section>
+  <section class="m-group"><div class="m-group-head"><span>01</span><strong>Featured</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-01.jpg" alt="FEATURED" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">01</span><strong>FEATURED</strong><span class="m-type">Concept poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-02.jpg" alt="FEATURED" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">02</span><strong>FEATURED</strong><span class="m-type">Concept poster</span></div>
+  
+</article></div></section>
+  <section class="m-group"><div class="m-group-head"><span>02</span><strong>Concept series / 07 × 4:5</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-03.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">03</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-04.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">04</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-05.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">05</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-06.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">06</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-07.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">07</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-08.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">08</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-45"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-09.jpg" alt="CONCEPT SERIES" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">09</span><strong>CONCEPT SERIES</strong><span class="m-type">Poster</span></div>
+  
+</article></div></section>
+  <section class="m-group"><div class="m-group-head"><span>03</span><strong>Experimental / 03 × 1:1</strong></div><div class="m-gallery">
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-10.jpg" alt="EXPERIMENTAL" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">10</span><strong>EXPERIMENTAL</strong><span class="m-type">1:1</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-11.jpg" alt="EXPERIMENTAL" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">11</span><strong>EXPERIMENTAL</strong><span class="m-type">1:1</span></div>
+  
+</article>
+<article class="m-media-card">
+  <div class="m-media-frame ratio-11"><img src="https://res.cloudinary.com/pksgbd8l/image/upload/poster-12.jpg" alt="EXPERIMENTAL" loading="lazy" decoding="async"></div>
+  <div class="m-caption"><span class="m-no">12</span><strong>EXPERIMENTAL</strong><span class="m-type">1:1</span></div>
+  
+</article></div></section>
+  <section class="m-closing"><span>Poster Design / Visual Concepts</span><p>Posters made to feel like <strong>artifacts</strong> — not just graphics placed on a page.</p></section>
+  <div class="m-footer"><span>Designed by Max</span><span>© 2026</span></div>
+</main>
+</template>
+
 
 <div class="contact-modal" aria-hidden="true">
 
